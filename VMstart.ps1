@@ -1,4 +1,4 @@
-
+Start-Sleep -Seconds 120
 
 $myIP = (Invoke-WebRequest -uri "https://api.ipify.org/").Content
 Write-Output "Configure IP" $myIp

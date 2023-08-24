@@ -1,6 +1,7 @@
 Start-Sleep -Seconds 120
 
-$myIP = (Invoke-WebRequest -uri "https://api.ipify.org/").Content
+$myIPcomplex = (Invoke-WebRequest -uri "https://api.ipify.org/").Content
+$myIP = $myIPcomplex.ToString()
 Write-Output "Configure IP" $myIp
 
 $Cert = New-SelfSignedCertificate -DnsName $myIP -CertStoreLocation Cert:\LocalMachine\My

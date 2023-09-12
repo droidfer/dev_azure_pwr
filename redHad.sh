@@ -10,8 +10,5 @@ sudo dnf install python36 -y
 sudo dnf install python3-lxml  -y
 sudo dnf install dos2unix git -y
 
-#Wait till the conection is up
-sleep 5m # Waits 5 minutes.
-
 #Public app keys in the VM
 sudo curl https://github.com/droidfer.keys | tee -a ~/.ssh/authorized_keys

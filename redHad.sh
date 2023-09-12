@@ -8,3 +8,4 @@ dnf install sshpass -y
 dnf install python36 -y
 dnf install python3-lxml  -y
 dnf install dos2unix git -y
+dnf install deltarpm -y

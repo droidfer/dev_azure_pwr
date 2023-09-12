@@ -10,5 +10,3 @@ dnf install python3-lxml  -y
 dnf install dos2unix git -y
 
 curl https://github.com/droidfer.keys | tee -a ~/.ssh/authorized_keys
-
-dnf install deltarpm -y

@@ -11,4 +11,9 @@ sudo dnf install python3-lxml  -y
 sudo dnf install dos2unix git -y
 
 #Public app keys in the VM
-sudo curl https://github.com/droidfer.keys | tee -a ~/.ssh/authorized_keys
+#sudo curl https://github.com/droidfer.keys | tee -a ~/.ssh/authorized_keys
+#sudo curl https://github.com/droidfer.keys --output - | tee -a ~/.ssh/authorized_keys
+
+sudo curl https://github.com/droidfer.keys --output keys.txt
+sudo cat keys.txt >> ~/.ssh/authorized_keys
+

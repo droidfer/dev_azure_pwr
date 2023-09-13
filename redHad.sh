@@ -14,6 +14,6 @@ sudo dnf install dos2unix git -y
 #sudo curl https://github.com/droidfer.keys | tee -a ~/.ssh/authorized_keys
 #sudo curl https://github.com/droidfer.keys --output - | tee -a ~/.ssh/authorized_keys
 
-sudo curl https://github.com/droidfer.keys --output keys.txt
-sudo cat /var/lib/waagent/custom-script/download/0/keys.txt >> ~/.ssh/authorized_keys
+sudo curl https://github.com/droidfer.keys --output ~/keys.txt
+sudo cat ~/keys.txt >> ~/.ssh/authorized_keys
 

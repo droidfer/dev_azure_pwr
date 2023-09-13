@@ -15,5 +15,5 @@ sudo dnf install dos2unix git -y
 #sudo curl https://github.com/droidfer.keys --output - | tee -a ~/.ssh/authorized_keys
 
 sudo curl https://github.com/droidfer.keys --output /tmp/keys.txt
-sudo cat /tmp/keys.txt >> ~/.ssh/authorized_keys
+sudo cat /tmp/keys.txt >> /home/redHatArroyo/.ssh/authorized_keys
 

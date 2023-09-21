@@ -9,12 +9,11 @@ New-Item -ItemType Directory c:\agent
 
 # Descargar Archivo a instalar
 $URL="https://vstsagentpackage.azureedge.net/agent/3.225.0/vsts-agent-win-x64-3.225.0.zip"
-$Path=“c:\agent\vsts-agent-win-x64-3.225.0.zip"
+$Path="c:\agent\vsts-agent-win-x64-3.225.0.zip"
 (New-Object System.Net.WebClient).DownloadFile($URL, $Path)
 
 # Extraer archivo de zip
-Add-Type -AssemblyName System.IO.Compression.FileSystem 
-[System.IO.Compression.ZipFile]::ExtractToDirectory($Path, "c:\agent\")
+Expand-Archive -LiteralPath 'c:\agent\vsts-agent-win-x64-3.225.0.zip' -DestinationPath C:\agent
 
 # Ir a location c:\agent
 Set-Location c: ; Set-Location agent

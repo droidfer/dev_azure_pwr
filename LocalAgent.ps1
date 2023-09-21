@@ -14,7 +14,7 @@ $Path=“C:\dwn\vsts-agent-win-x64-3.225.0.zip"
 
 Set-Location c: ;  mkdir agent ; Set-Location agent
 
-Add-Type -AssemblyName System.IO.Compression.FileSystem ; [System.IO.Compression.ZipFile]::ExtractToDirectory($Path, "$PWD")
+Add-Type -AssemblyName System.IO.Compression.FileSystem ; [System.IO.Compression.ZipFile]::ExtractToDirectory($Path, "C:\agent\")
 
 .\config.cmd --unattended --url https://dev.azure.com/ArroyoTraining/ --auth pat --token $token --pool $poolSet --agent $agentName --work _work --runAsService N --runAsAutoLogon N
 

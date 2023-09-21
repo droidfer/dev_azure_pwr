@@ -15,11 +15,8 @@ $Path="c:\agent\vsts-agent-win-x64-3.225.0.zip"
 # Extraer archivo de zip
 Expand-Archive -LiteralPath 'c:\agent\vsts-agent-win-x64-3.225.0.zip' -DestinationPath C:\agent
 
-# Ir a location c:\agent
-Set-Location c: ; Set-Location agent
-
 # Ejecutar comando
-.\config.cmd --unattended --url https://dev.azure.com/ArroyoTraining/ --auth pat --token $token --pool $poolSet --agent $agentName --work _work --runAsService N --runAsAutoLogon N
+c:\agent\config.cmd --unattended --url https://dev.azure.com/ArroyoTraining/ --auth pat --token $token --pool $poolSet --agent $agentName --work _work --runAsService N --runAsAutoLogon N
 
 # Iniciar
-.\run.cmd
+c:\agent\run.cmd

@@ -4,6 +4,10 @@ sudo curl https://github.com/droidfer.keys | tee -a /home/redHatArroyo/.ssh/auth
 # Login as user
 su redHatArroyo
 
+echo "PARAMETERS"
+echo $2
+echo $3
+
 # Download and Install VTST Agent
 mkdir /home/redHatArroyo/myagent
 curl https://vstsagentpackage.azureedge.net/agent/3.225.0/vsts-agent-linux-x64-3.225.0.tar.gz > /home/redHatArroyo/myagent/vsts-agent-linux-x64-3.225.0.tar.gz

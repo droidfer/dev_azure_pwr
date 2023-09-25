@@ -13,7 +13,7 @@ tar zxvf /home/redHatArroyo/myagent/vsts-agent-linux-x64-3.225.0.tar.gz -C /home
 sudo chown -R redHatArroyo /home/redHatArroyo/myagent/
 
 # Configure Agent
-su redHatArroyo /home/redHatArroyo/myagent/config.sh --unattended --url https://dev.azure.com/ArroyoTraining/ --auth pat --token 2twol74g35sqs5vhnh6x6rkxhps5whawm36h4p2vjuuxtuhklaoa --pool FkPool --agent redhatPool
+su redHatArroyo /home/redHatArroyo/myagent/config.sh --unattended --url https://dev.azure.com/ArroyoTraining/ --auth pat --token $1 --pool $2 --agent $3
 
 # Start Agent
 su redHatArroyo /home/redHatArroyo/myagent/run.sh
